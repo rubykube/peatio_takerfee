@@ -1,3 +1,10 @@
+# Ignore vim temporary files
+**/*.swp
+**/*.swo
+
+# Ignore RubyMine files
+.idea
+
 /.bundle/
 /.yardoc
 /_yardoc/

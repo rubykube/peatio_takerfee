@@ -1,0 +1,60 @@
+PATH
+  remote: .
+  specs:
+    peatio-takerfee (0.1.0)
+      method-not-implemented (~> 1.0.1)
+      peatio (~> 0.4.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    amq-protocol (2.3.0)
+    amqp (1.8.0)
+      amq-protocol (>= 2.2.0)
+      eventmachine
+    bunny (2.12.0)
+      amq-protocol (~> 2.3, >= 2.3.0)
+    clamp (1.3.0)
+    diff-lcs (1.3)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.7)
+    http_parser.rb (0.6.0)
+    jwt (2.1.0)
+    method-not-implemented (1.0.1)
+    mysql2 (0.5.2)
+    peatio (0.4.2)
+      amqp
+      bunny
+      clamp
+      em-websocket
+      eventmachine
+      jwt
+      mysql2
+    rake (10.5.0)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  peatio-takerfee!
+  rake (~> 10.0)
+  rspec (~> 3.0)
+
+BUNDLED WITH
+   1.16.3

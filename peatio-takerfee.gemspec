@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "peatio/takerfee/version"
@@ -6,18 +5,19 @@ require "peatio/takerfee/version"
 Gem::Specification.new do |spec|
   spec.name          = "peatio-takerfee"
   spec.version       = Peatio::Takerfee::VERSION
-  spec.authors       = ["MoD"]
-  spec.email         = ["mod@websys.io"]
+  spec.authors       = ["MoD", "Yaroslav Savchuk"]
+  spec.email         = ["mod@websys.io", "ysavchuk@heliostech.fr"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{ Peatio plugin for custom fee calculation process.}
+  spec.description   = %q{ A plugin which calculates fee based on order creation sequence.
+                           So fees are charged only from market taker.}
+  spec.homepage      = "https://www.peatio.tech"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "Set to 'http://mygemserver.com'"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -31,6 +31,9 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "peatio", "~> 0.4.2"
+  spec.add_runtime_dependency "method-not-implemented", "~> 1.0.1"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
